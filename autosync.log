@@ -1,0 +1,4 @@
+========== Mon Jun  8 12:41:40 MSK 2026 ==========
+Pulling latest changes...
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
