@@ -1,6 +1,3 @@
-# SkillMatrix
-
-## Документы
 
 - [README](readme.md)
 - [Про музыку](Про%20музыку.md)
