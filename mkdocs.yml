@@ -1,0 +1,11 @@
+site_name: SkillMatrix
+site_url: https://skillmatrix.ru
+
+theme:
+  name: material
+  language: ru
+
+nav:
+  - Главная: readme.md
+  - Про музыку: Про музыку.md
+  - TODO: ToDo.md
