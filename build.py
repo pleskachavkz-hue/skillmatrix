@@ -2,7 +2,7 @@ from pathlib import Path
 import markdown
 
 MD_DIR = Path("md")
-HTML_DIR = Path("html")
+HTML_DIR = Path("docs")
 
 HTML_DIR.mkdir(exist_ok=True)
 

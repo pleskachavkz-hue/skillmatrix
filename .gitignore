@@ -2,5 +2,5 @@
 autosync.log
 .DS_Store
 requirements.txt
-.templates/
+templates/
 .venv/
