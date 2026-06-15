@@ -2,5 +2,4 @@
 *.log
 .DS_Store
 requirements.txt
-templates/
 .venv/
