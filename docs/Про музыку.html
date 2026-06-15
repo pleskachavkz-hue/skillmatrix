@@ -3,28 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Про музыку</title>
+    <title>Про музыку · SkillMatrix</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        body {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            font-family: system-ui, sans-serif;
-            line-height: 1.7;
+        .prose {
+            max-width: 70ch;
         }
 
-        pre {
+        .prose h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .prose ul,
+        .prose ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .prose li {
+            margin: 0.5rem 0;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #d4d4d8;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            color: #52525b;
+            font-style: italic;
+        }
+
+        .prose code {
+            background: #f4f4f5;
+            padding: 0.15rem 0.35rem;
+            border-radius: 0.25rem;
+            font-size: 0.9em;
+        }
+
+        .prose pre {
+            background: #18181b;
+            color: #f4f4f5;
+            padding: 1rem;
+            border-radius: 0.75rem;
             overflow-x: auto;
+            margin: 1.5rem 0;
         }
 
-        img {
-            max-width: 100%;
+        .prose pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .prose th,
+        .prose td {
+            border: 1px solid #e4e4e7;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .prose th {
+            background: #fafafa;
+        }
+
+        .prose img {
+            border-radius: 0.75rem;
+            margin: 2rem auto;
+        }
+
+        .prose hr {
+            margin: 3rem 0;
+            border-color: #e4e4e7;
         }
     </style>
 </head>
-<body>
-<h1>Про музыку</h1>
+<body class="bg-zinc-50 text-zinc-900">
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+
+        <header class="mb-12">
+            <a
+                href="index.html"
+                class="text-zinc-500 hover:text-zinc-900 transition"
+            >
+                ← SkillMatrix
+            </a>
+        </header>
+
+        <article class="prose mx-auto">
+            <h1>Про музыку</h1>
 <p>Когда человек хочет научиться играть на гитаре, пианино или любом другом инструменте, у него в голове обычно каша. Остатки школьной программы, скрипичные ключи, какие-то термины, которые он давно забыл. Всё это создаёт ощущение, что музыка — очень сложная наука.</p>
 <p>На самом деле для старта всё гораздо проще.</p>
 <h2>Всего 12 нот</h2>
@@ -93,5 +188,9 @@
 <p>Дальше всё сводится к практике.</p>
 <p>Играй песни, которые нравятся. Следи за ритмом. Слушай, как меняется настроение от аккордов и громкости.</p>
 <p>Остальное придёт само.</p>
+        </article>
+
+    </main>
+
 </body>
 </html>
