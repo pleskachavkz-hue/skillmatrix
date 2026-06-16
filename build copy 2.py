@@ -102,13 +102,20 @@ prefix + folder + "/"
         active = ""
 
         if page == current_page:
-            active = "sidebar-active"
+            active = """
+bg-blue-100
+text-blue-700
+rounded
+px-2
+"""
 
         html += f"""
 <a
 href="{root}{page}"
 class="
-sidebar-link
+block
+py-1
+hover:text-blue-600
 {active}
 "
 >
