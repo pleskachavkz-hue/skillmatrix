@@ -10,10 +10,6 @@
 
 <style>
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background: #f8fafc;
 }
@@ -27,17 +23,16 @@ pre {
     border-radius: 12px;
 }
 
-img {
-    border-radius: 12px;
+aside {
+    scrollbar-width: thin;
 }
 
-blockquote {
-    border-left: 4px solid #cbd5e1;
-    padding-left: 1rem;
+details summary {
+    list-style: none;
 }
 
-table {
-    width: 100%;
+details summary::-webkit-details-marker {
+    display: none;
 }
 
 </style>
@@ -46,19 +41,225 @@ table {
 
 <body>
 
-<div class="max-w-4xl mx-auto px-6 py-10">
+<div class="max-w-7xl mx-auto">
 
-    <nav class="mb-10">
-        <a
-            href="/"
-            class="text-slate-500 hover:text-slate-900"
-        >
-            ← SkillMatrix
-        </a>
-    </nav>
+<div class="grid grid-cols-12">
 
-    <article class="prose prose-slate prose-lg max-w-none">
-        <h2 id="crm-">Где находится CRM-маркетинг на пути клиента</h2>
+<!-- Sidebar -->
+
+<aside
+class="
+col-span-3
+border-r
+border-slate-200
+bg-white
+min-h-screen
+p-6
+sticky
+top-0
+overflow-y-auto
+"
+>
+
+<a
+href="../index.html"
+class="
+text-2xl
+font-bold
+block
+mb-8
+"
+>
+SkillMatrix
+</a>
+
+
+<details open class="mb-2">
+
+<summary
+class="
+cursor-pointer
+font-semibold
+py-1
+"
+>
+📁 Про CRM
+</summary>
+
+<div class="ml-4">
+
+<a
+href="../Про CRM/CRM-маркетинг- почему маркетинг давно перестал быть про рекламу.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+"
+>
+📄 CRM-маркетинг- почему маркетинг давно перестал быть про рекламу
+</a>
+
+<a
+href="../Про CRM/Где находится CRM-маркетинг на пути клиента.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+bg-blue-100
+text-blue-700
+rounded
+px-2
+
+"
+>
+📄 Где находится CRM-маркетинг на пути клиента
+</a>
+
+<a
+href="../Про CRM/Оффер.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+"
+>
+📄 Оффер
+</a>
+
+<a
+href="../Про CRM/Почему я занимаюсь CRM-маркетингом.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+"
+>
+📄 Почему я занимаюсь CRM-маркетингом
+</a>
+
+<a
+href="../Про CRM/Путь клиента и место CRM-маркетинга.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+"
+>
+📄 Путь клиента и место CRM-маркетинга
+</a>
+
+<a
+href="../Про CRM/Что такое CRM-маркетинг.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+"
+>
+📄 Что такое CRM-маркетинг
+</a>
+
+</div>
+
+</details>
+
+<details open class="mb-2">
+
+<summary
+class="
+cursor-pointer
+font-semibold
+py-1
+"
+>
+📁 Про музыку
+</summary>
+
+<div class="ml-4">
+
+<a
+href="../Про музыку/Про музыку простыми словами.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+"
+>
+📄 Про музыку простыми словами
+</a>
+
+</div>
+
+</details>
+
+<details open class="mb-2">
+
+<summary
+class="
+cursor-pointer
+font-semibold
+py-1
+"
+>
+📁 Про ремонт
+</summary>
+
+<div class="ml-4">
+
+<a
+href="../Про ремонт/Как я вешал зеркало в ванной.html"
+class="
+block
+py-1
+hover:text-blue-600
+
+"
+>
+📄 Как я вешал зеркало в ванной
+</a>
+
+</div>
+
+</details>
+
+
+</aside>
+
+<!-- Content -->
+
+<main
+class="
+col-span-9
+p-10
+"
+>
+
+<div
+class="
+text-sm
+text-slate-500
+mb-8
+"
+>
+<a href="../index.html" class="hover:text-slate-900">SkillMatrix</a> <span class='mx-2'>›</span> Про CRM <span class='mx-2'>›</span> Где находится CRM-маркетинг на пути клиента
+</div>
+
+<article
+class="
+prose
+prose-slate
+prose-lg
+max-w-none
+"
+>
+<h2 id="crm-">Где находится CRM-маркетинг на пути клиента</h2>
 <p>Чтобы понять роль CRM-маркетинга, полезно посмотреть на весь путь клиента.</p>
 <pre class="highlight"><code class="language-text">Реклама
 SEO
@@ -191,7 +392,11 @@ SEO
 <li>нескольких автоматических сценариев.</li>
 </ul>
 <p>Поэтому именно welcome-цепочка чаще всего становится первым шагом к системной работе с клиентской базой.</p>
-    </article>
+</article>
+
+</main>
+
+</div>
 
 </div>
 
