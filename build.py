@@ -1,234 +1,177 @@
 from pathlib import Path
 import markdown
-import shutil
+import os
 
 MD_DIR = Path("md")
-DOCS_DIR = Path("docs")
-TEMPLATES_DIR = Path("templates")
+OUT_DIR = Path("docs")
 
-# -----------------------------------------
-# Очистка docs
-# -----------------------------------------
+OUT_DIR.mkdir(exist_ok=True)
 
-if DOCS_DIR.exists():
-    shutil.rmtree(DOCS_DIR)
+# ---------- helpers ----------
 
-DOCS_DIR.mkdir(parents=True, exist_ok=True)
+def rel_path(file: Path):
+    return str(file.relative_to(MD_DIR)).replace("\\", "/")
 
-# -----------------------------------------
-# Шаблон
-# -----------------------------------------
+def html_template(title, content, nav_html, breadcrumb):
+    return f"""
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-PAGE_TEMPLATE = (
-    TEMPLATES_DIR / "page.html"
-).read_text(encoding="utf-8")
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-# -----------------------------------------
-# Строим дерево
-# -----------------------------------------
+<title>{title}</title>
 
-tree = {}
+<style>
+body {{
+  background: #f8f9fa;
+}}
 
-for md_file in MD_DIR.rglob("*.md"):
-    rel_path = md_file.relative_to(MD_DIR)
+.wrapper {{
+  display: flex;
+  gap: 40px;
+}}
 
-    node = tree
+.sidebar {{
+  width: 260px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}}
 
-    for part in rel_path.parts[:-1]:
-        node = node.setdefault(part, {})
+.content {{
+  flex: 1;
+  max-width: 900px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}}
 
-    node.setdefault("__files__", []).append(md_file.stem)
+pre {{
+  background: #f1f3f5;
+  padding: 12px;
+  border-radius: 8px;
+}}
 
-# -----------------------------------------
-# Sidebar
-# -----------------------------------------
+code {{
+  font-family: ui-monospace, Menlo, monospace;
+}}
 
-def render_sidebar(tree, current_page, root, prefix=""):
-    html = ""
+a {{
+  text-decoration: none;
+}}
 
-    folders = sorted(
-        k for k in tree.keys()
-        if k != "__files__"
-    )
+.breadcrumbs {{
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #6c757d;
+}}
 
-    for folder in folders:
-        html += f"""
-<details open>
-    <summary>{folder}</summary>
-    <div>
-        {render_sidebar(
-            tree[folder],
-            current_page,
-            root,
-            prefix + folder + "/"
-        )}
-    </div>
-</details>
+.dark {{
+  background: #111;
+  color: #ddd;
+}}
+
+.dark .content {{
+  background: #1c1c1c;
+  color: #ddd;
+}}
+
+.toggle {{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}}
+</style>
+
+</head>
+
+<body>
+
+<button class="btn btn-sm btn-outline-secondary toggle" onclick="toggleTheme()">
+  🌓
+</button>
+
+<div class="container wrapper">
+
+<div class="sidebar">
+  <h5>📚 Skillmatrix</h5>
+  <hr>
+  {nav_html}
+</div>
+
+<div class="content">
+
+<div class="breadcrumbs">{breadcrumb}</div>
+
+{content}
+
+</div>
+
+</div>
+
+<script>
+function toggleTheme() {{
+  document.body.classList.toggle('dark');
+}}
+</script>
+
+</body>
+</html>
 """
 
-    for file_name in sorted(
-        tree.get("__files__", [])
-    ):
-        page = prefix + file_name + ".html"
+# ---------- scan md ----------
 
-        active = ""
-        if page == current_page:
-            active = ' style="font-weight:bold;"'
+files = list(MD_DIR.rglob("*.md"))
 
-        html += (
-            f'<a href="{root}{page}" '
-            f'title="{file_name}"{active}>'
-            f'{file_name}</a>'
-        )
+nav_items = []
 
+for f in files:
+    nav_items.append((rel_path(f), f.stem))
+
+def build_nav(current=None):
+    html = "<ul class='list-unstyled'>"
+    for path, name in nav_items:
+        link = path.replace(".md", ".html")
+        active = "fw-bold" if current == path else ""
+        html += f"<li><a class='{active}' href='{link}'>{name}</a></li>"
+    html += "</ul>"
     return html
 
-# -----------------------------------------
-# Breadcrumbs
-# -----------------------------------------
+# ---------- build pages ----------
 
-def render_breadcrumbs(rel_path, root):
-    parts = rel_path.parts
+for f in files:
+    md_text = f.read_text(encoding="utf-8")
+    html = markdown.markdown(md_text, extensions=["fenced_code", "tables"])
 
-    crumbs = [
-        f'<a href="{root}index.html">SkillMatrix</a>'
-    ]
+    rel = rel_path(f)
+    out_file = OUT_DIR / rel.replace(".md", ".html")
 
-    for part in parts[:-1]:
-        crumbs.append(part)
+    out_file.parent.mkdir(parents=True, exist_ok=True)
 
-    crumbs.append(rel_path.stem)
+    breadcrumb = f"Home / {rel.replace('.md','')}"
 
-    return " › ".join(crumbs)
-
-# -----------------------------------------
-# Генерация страниц
-# -----------------------------------------
-
-count = 0
-
-for md_file in MD_DIR.rglob("*.md"):
-    count += 1
-
-    rel_path = md_file.relative_to(MD_DIR)
-
-    html_rel = rel_path.with_suffix(".html")
-
-    output_file = DOCS_DIR / html_rel
-
-    output_file.parent.mkdir(
-        parents=True,
-        exist_ok=True
+    page = html_template(
+        title=f.stem,
+        content=html,
+        nav_html=build_nav(rel),
+        breadcrumb=breadcrumb
     )
 
-    depth = len(rel_path.parts) - 1
+    out_file.write_text(page, encoding="utf-8")
 
-    root = "../" * depth
+# ---------- index ----------
 
-    current_page = (
-        str(html_rel)
-        .replace("\\", "/")
-    )
-
-    sidebar = render_sidebar(
-        tree,
-        current_page,
-        root
-    )
-
-    breadcrumbs = render_breadcrumbs(
-        rel_path,
-        root
-    )
-
-    md_text = md_file.read_text(
-        encoding="utf-8"
-    )
-
-    html_content = markdown.markdown(
-        md_text,
-        extensions=[
-            "extra",
-            "tables",
-            "pymdownx.superfences",
-            "pymdownx.highlight",
-        ]
-    )
-
-    page_html = (
-        PAGE_TEMPLATE
-        .replace(
-            "{{title}}",
-            md_file.stem
-        )
-        .replace(
-            "{{sidebar}}",
-            sidebar
-        )
-        .replace(
-            "{{breadcrumbs}}",
-            breadcrumbs
-        )
-        .replace(
-            "{{content}}",
-            html_content
-        )
-        .replace(
-            "{{root}}",
-            root
-        )
-    )
-
-    output_file.write_text(
-        page_html,
-        encoding="utf-8"
-    )
-
-# -----------------------------------------
-# Главная
-# -----------------------------------------
-
-sidebar = render_sidebar(
-    tree,
-    "",
-    ""
+index_html = html_template(
+    title="Skillmatrix",
+    content="<h1>📚 Skillmatrix</h1><p>Welcome.</p>",
+    nav_html=build_nav(),
+    breadcrumb="Home"
 )
 
-content = f"""
-<h1>SkillMatrix</h1>
+(OUT_DIR / "index.html").write_text(index_html, encoding="utf-8")
 
-<p>Библиотека честного опыта.</p>
-
-<p><strong>{count}</strong> заметок.</p>
-"""
-
-index_html = (
-    PAGE_TEMPLATE
-    .replace(
-        "{{title}}",
-        "SkillMatrix"
-    )
-    .replace(
-        "{{sidebar}}",
-        sidebar
-    )
-    .replace(
-        "{{breadcrumbs}}",
-        "Главная"
-    )
-    .replace(
-        "{{content}}",
-        content
-    )
-    .replace(
-        "{{root}}",
-        ""
-    )
-)
-
-(DOCS_DIR / "index.html").write_text(
-    index_html,
-    encoding="utf-8"
-)
-
-print(f"✓ Build complete ({count} pages)")
+print("Done → /docs")
