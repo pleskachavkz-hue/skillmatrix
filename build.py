@@ -29,36 +29,21 @@ PAGE_TEMPLATE = (
 
 tree = {}
 
-all_pages = []
-
 for md_file in MD_DIR.rglob("*.md"):
-
     rel_path = md_file.relative_to(MD_DIR)
-
-    html_path = rel_path.with_suffix(".html")
-
-    all_pages.append(str(html_path).replace("\\", "/"))
 
     node = tree
 
     for part in rel_path.parts[:-1]:
         node = node.setdefault(part, {})
 
-    node.setdefault(
-        "__files__",
-        []
-    ).append(md_file.stem)
+    node.setdefault("__files__", []).append(md_file.stem)
 
 # -----------------------------------------
 # Sidebar
 # -----------------------------------------
 
-def render_sidebar(
-    tree,
-    current_page,
-    root,
-    prefix=""
-):
+def render_sidebar(tree, current_page, root, prefix=""):
     html = ""
 
     folders = sorted(
@@ -67,54 +52,34 @@ def render_sidebar(
     )
 
     for folder in folders:
-
         html += f"""
-<details open class="mb-2">
-
-<summary
-class="
-cursor-pointer
-font-semibold
-py-1
-"
->
-📁 {folder}
-</summary>
-
-<div class="ml-4">
-{render_sidebar(
-tree[folder],
-current_page,
-root,
-prefix + folder + "/"
-)}
-</div>
-
+<details open>
+    <summary>{folder}</summary>
+    <div>
+        {render_sidebar(
+            tree[folder],
+            current_page,
+            root,
+            prefix + folder + "/"
+        )}
+    </div>
 </details>
 """
 
     for file_name in sorted(
         tree.get("__files__", [])
     ):
-
         page = prefix + file_name + ".html"
 
         active = ""
-
         if page == current_page:
-            active = "sidebar-active"
+            active = ' style="font-weight:bold;"'
 
-        html += f"""
-<a
-href="{root}{page}"
-class="
-sidebar-link
-{active}
-"
->
-📄 {file_name}
-</a>
-"""
+        html += (
+            f'<a href="{root}{page}" '
+            f'title="{file_name}"{active}>'
+            f'{file_name}</a>'
+        )
 
     return html
 
@@ -122,15 +87,11 @@ sidebar-link
 # Breadcrumbs
 # -----------------------------------------
 
-def render_breadcrumbs(
-    rel_path,
-    root
-):
-
+def render_breadcrumbs(rel_path, root):
     parts = rel_path.parts
 
     crumbs = [
-        f'<a href="{root}index.html" class="hover:text-slate-900">SkillMatrix</a>'
+        f'<a href="{root}index.html">SkillMatrix</a>'
     ]
 
     for part in parts[:-1]:
@@ -138,16 +99,15 @@ def render_breadcrumbs(
 
     crumbs.append(rel_path.stem)
 
-    return " <span class='mx-2'>›</span> ".join(crumbs)
+    return " › ".join(crumbs)
 
 # -----------------------------------------
-# Генерация статей
+# Генерация страниц
 # -----------------------------------------
 
 count = 0
 
 for md_file in MD_DIR.rglob("*.md"):
-
     count += 1
 
     rel_path = md_file.relative_to(MD_DIR)
@@ -165,9 +125,10 @@ for md_file in MD_DIR.rglob("*.md"):
 
     root = "../" * depth
 
-    current_page = str(
-        html_rel
-    ).replace("\\", "/")
+    current_page = (
+        str(html_rel)
+        .replace("\\", "/")
+    )
 
     sidebar = render_sidebar(
         tree,
@@ -189,7 +150,6 @@ for md_file in MD_DIR.rglob("*.md"):
         extensions=[
             "extra",
             "tables",
-            "toc",
             "pymdownx.superfences",
             "pymdownx.highlight",
         ]
@@ -266,9 +226,7 @@ index_html = (
     )
 )
 
-(
-    DOCS_DIR / "index.html"
-).write_text(
+(DOCS_DIR / "index.html").write_text(
     index_html,
     encoding="utf-8"
 )

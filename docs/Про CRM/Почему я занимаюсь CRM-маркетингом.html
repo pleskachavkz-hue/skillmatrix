@@ -1,244 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Почему я занимаюсь CRM-маркетингом</title>
+    <title>Почему я занимаюсь CRM-маркетингом</title>
 
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
-<style>
+    <style>
+        :root {
+            --bg: #f7f7f8;
+            --panel: #ffffff;
+            --border: #e6e6e6;
+            --text: #111;
+            --muted: #666;
+        }
 
-body {
-    background: #f8fafc;
-}
+        html, body {
+            margin: 0;
+            padding: 0;
 
-.prose {
-    max-width: none;
-}
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
 
-pre {
-    overflow-x: auto;
-    border-radius: 12px;
-}
+            font-size: 14px;
+            background: var(--bg);
+            color: var(--text);
+        }
 
-aside {
-    scrollbar-width: thin;
-}
+        /* LAYOUT */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
 
-details summary {
-    list-style: none;
-}
+        /* SIDEBAR */
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
 
-details summary::-webkit-details-marker {
-    display: none;
-}
+            background: var(--panel);
+            border-right: 1px solid var(--border);
 
-</style>
+            padding: 6px;
 
+            position: sticky;
+            top: 0;
+            height: 100vh;
+
+            overflow-y: auto;
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 15px;
+
+            padding: 6px 8px;
+            margin-bottom: 6px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* ACCORDION FIX */
+        .sidebar details {
+            margin: 8px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .sidebar summary {
+            list-style: none;
+            cursor: pointer;
+
+            padding: 4px 8px;
+            margin: 0;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            border-radius: 6px;
+        }
+
+        .sidebar summary:hover {
+            background: #f2f2f2;
+        }
+
+        .sidebar summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .sidebar details > div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar a {
+            display: block;
+
+            padding: 3px 8px;
+            margin-left: 6px;
+
+            font-size: 13px;
+
+            text-decoration: none;
+            color: var(--text);
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            border-radius: 6px;
+        }
+
+        .sidebar a:hover {
+            background: #f2f2f2;
+        }
+
+        /* MAIN */
+        .main {
+            flex: 1;
+            min-width: 0;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topbar {
+            background: var(--panel);
+            border-bottom: 1px solid var(--border);
+
+            padding: 8px 14px;
+
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .breadcrumbs {
+            padding: 4px 14px;
+
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* CONTENT (tight chat style) */
+        .content {
+            max-width: 860px;
+            width: 100%;
+
+            margin: 0 auto;
+
+            padding: 8px 12px;
+        }
+
+        .message {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            padding: 12px 14px;
+            margin-bottom: 10px;
+
+            line-height: 1.6;
+        }
+
+        /* REMOVE DUPLICATE H1 */
+        .content h1:first-child {
+            display: none;
+        }
+
+        .content h2 {
+            font-size: 16px;
+            margin-top: 16px;
+        }
+
+        .content h3 {
+            font-size: 14px;
+            margin-top: 14px;
+        }
+
+        .content p,
+        .content li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .content pre {
+            background: #f6f6f6;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+
+        blockquote {
+            border-left: 3px solid #ddd;
+            padding-left: 10px;
+            margin: 0;
+            color: #555;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .layout {
+                display: block;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .content {
+                padding: 8px;
+            }
+
+            .breadcrumbs {
+                padding: 6px 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="max-w-7xl mx-auto">
+<div class="layout">
 
-<div class="grid grid-cols-12">
+    <aside class="sidebar">
 
-<!-- Sidebar -->
+        <div class="brand">
+            SkillMatrix
+        </div>
 
-<aside
-class="
-col-span-3
-border-r
-border-slate-200
-bg-white
-min-h-screen
-p-6
-sticky
-top-0
-overflow-y-auto
-"
->
-
-<a
-href="../index.html"
-class="
-text-2xl
-font-bold
-block
-mb-8
-"
->
-SkillMatrix
-</a>
-
-
-<details open class="mb-2">
-
-<summary
-class="
-cursor-pointer
-font-semibold
-py-1
-"
->
-📁 Про CRM
-</summary>
-
-<div class="ml-4">
-
-<a
-href="../Про CRM/CRM-маркетинг- почему маркетинг давно перестал быть про рекламу.html"
-class="
-sidebar-link
-
-"
->
-📄 CRM-маркетинг- почему маркетинг давно перестал быть про рекламу
-</a>
-
-<a
-href="../Про CRM/Где находится CRM-маркетинг на пути клиента.html"
-class="
-sidebar-link
-
-"
->
-📄 Где находится CRM-маркетинг на пути клиента
-</a>
-
-<a
-href="../Про CRM/Оффер.html"
-class="
-sidebar-link
-
-"
->
-📄 Оффер
-</a>
-
-<a
-href="../Про CRM/Почему я занимаюсь CRM-маркетингом.html"
-class="
-sidebar-link
-sidebar-active
-"
->
-📄 Почему я занимаюсь CRM-маркетингом
-</a>
-
-<a
-href="../Про CRM/Путь клиента и место CRM-маркетинга.html"
-class="
-sidebar-link
-
-"
->
-📄 Путь клиента и место CRM-маркетинга
-</a>
-
-<a
-href="../Про CRM/Что такое CRM-маркетинг.html"
-class="
-sidebar-link
-
-"
->
-📄 Что такое CRM-маркетинг
-</a>
-
-</div>
-
+        
+<details open>
+    <summary>Про CRM</summary>
+    <div>
+        <a href="../Про CRM/CRM-маркетинг- почему маркетинг давно перестал быть про рекламу.html" title="CRM-маркетинг- почему маркетинг давно перестал быть про рекламу">CRM-маркетинг- почему маркетинг давно перестал быть про рекламу</a><a href="../Про CRM/Где находится CRM-маркетинг на пути клиента.html" title="Где находится CRM-маркетинг на пути клиента">Где находится CRM-маркетинг на пути клиента</a><a href="../Про CRM/Оффер.html" title="Оффер">Оффер</a><a href="../Про CRM/Почему я занимаюсь CRM-маркетингом.html" title="Почему я занимаюсь CRM-маркетингом" style="font-weight:bold;">Почему я занимаюсь CRM-маркетингом</a><a href="../Про CRM/Путь клиента и место CRM-маркетинга.html" title="Путь клиента и место CRM-маркетинга">Путь клиента и место CRM-маркетинга</a><a href="../Про CRM/Что такое CRM-маркетинг.html" title="Что такое CRM-маркетинг">Что такое CRM-маркетинг</a>
+    </div>
 </details>
 
-<details open class="mb-2">
-
-<summary
-class="
-cursor-pointer
-font-semibold
-py-1
-"
->
-📁 Про музыку
-</summary>
-
-<div class="ml-4">
-
-<a
-href="../Про музыку/Про музыку простыми словами.html"
-class="
-sidebar-link
-
-"
->
-📄 Про музыку простыми словами
-</a>
-
-</div>
-
+<details open>
+    <summary>Про музыку</summary>
+    <div>
+        <a href="../Про музыку/Про музыку простыми словами.html" title="Про музыку простыми словами">Про музыку простыми словами</a>
+    </div>
 </details>
 
-<details open class="mb-2">
-
-<summary
-class="
-cursor-pointer
-font-semibold
-py-1
-"
->
-📁 Про ремонт
-</summary>
-
-<div class="ml-4">
-
-<a
-href="../Про ремонт/Как я вешал зеркало в ванной.html"
-class="
-sidebar-link
-
-"
->
-📄 Как я вешал зеркало в ванной
-</a>
-
-</div>
-
+<details open>
+    <summary>Про ремонт</summary>
+    <div>
+        <a href="../Про ремонт/Как я вешал зеркало в ванной.html" title="Как я вешал зеркало в ванной">Как я вешал зеркало в ванной</a>
+    </div>
 </details>
 
 
-</aside>
+    </aside>
 
-<!-- Content -->
+    <main class="main">
 
-<main
-class="
-col-span-9
-p-10
-"
->
+        <div class="topbar">
+            Почему я занимаюсь CRM-маркетингом
+        </div>
 
-<div
-class="
-text-sm
-text-slate-500
-mb-8
-"
->
-<a href="../index.html" class="hover:text-slate-900">SkillMatrix</a> <span class='mx-2'>›</span> Про CRM <span class='mx-2'>›</span> Почему я занимаюсь CRM-маркетингом
-</div>
+        <div class="breadcrumbs">
+            <a href="../index.html">SkillMatrix</a> › Про CRM › Почему я занимаюсь CRM-маркетингом
+        </div>
 
-<article
-class="
-prose
-prose-slate
-prose-lg
-max-w-none
-"
->
-<h1 id="crm-">Почему я занимаюсь CRM-маркетингом</h1>
+        <div class="content">
+            <div class="message">
+                <h1>Почему я занимаюсь CRM-маркетингом</h1>
 <p>Мне сложно назвать себя маркетологом в классическом понимании этого слова.</p>
 <p>Когда люди слышат слово «маркетинг», они часто представляют рекламу, воронки, прогревы, лиды, конверсии и бесконечную гонку за вниманием человека.</p>
 <p>Меня всегда больше интересовало другое.</p>
@@ -247,7 +288,7 @@ max-w-none
 <p>Что помогает человеку разобраться в сложном вопросе.</p>
 <p>Почему одни компании вызывают уважение, а другие раздражение.</p>
 <p>И почему хорошему продукту иногда не хватает буквально нескольких правильных слов, чтобы его поняли.</p>
-<h2 id="_1">Про честность</h2>
+<h2>Про честность</h2>
 <p>Наверное, главная идея, которая проходит через многие мои проекты, — честность.</p>
 <p>Не в смысле морального превосходства.</p>
 <p>А в смысле честного описания реальности.</p>
@@ -261,7 +302,7 @@ max-w-none
 <p>В выводах.</p>
 <p>В понимании того, почему что-то получилось или не получилось.</p>
 <p>Эта идея постепенно стала частью моего отношения к жизни вообще.</p>
-<h2 id="_2">Про технологии</h2>
+<h2>Про технологии</h2>
 <p>По образованию и опыту я скорее инженер, чем маркетолог.</p>
 <p>Мне всегда нравилось разбираться в том, как устроены системы.</p>
 <p>Неважно какие:</p>
@@ -276,7 +317,7 @@ max-w-none
 <p>Именно поэтому мне нравится автоматизация.</p>
 <p>Не потому что она заменяет людей.</p>
 <p>А потому что она позволяет убрать рутину и освободить время для того, что действительно требует человеческого участия.</p>
-<h2 id="crm-_1">Почему CRM-маркетинг</h2>
+<h2>Почему CRM-маркетинг</h2>
 <p>Из всех направлений маркетинга именно CRM показался мне наиболее здравым.</p>
 <p>Он начинается не с вопроса:</p>
 <blockquote>
@@ -297,7 +338,7 @@ max-w-none
 <p>Не в новом рекламном кабинете.</p>
 <p>Не в очередном модном канале.</p>
 <p>А в нормальной человеческой коммуникации.</p>
-<h2 id="_3">Про маркетинг</h2>
+<h2>Про маркетинг</h2>
 <p>Я не люблю слово «прогрев».</p>
 <p>Оно звучит так, будто задача бизнеса — как-то незаметно подтолкнуть человека к покупке.</p>
 <p>Мне ближе другой взгляд.</p>
@@ -310,7 +351,7 @@ max-w-none
 <p>И это нормально.</p>
 <p>Потому что хороший маркетинг не должен заставлять человека покупать то, что ему не нужно.</p>
 <p>Он должен помогать находить то, что действительно может решить его задачу.</p>
-<h2 id="email">Почему email</h2>
+<h2>Почему email</h2>
 <p>Email для меня интересен не как канал продаж.</p>
 <p>А как канал коммуникации.</p>
 <p>Это один из немногих инструментов, который остаётся относительно независимым от алгоритмов социальных сетей, рекламных платформ и постоянно меняющихся правил.</p>
@@ -326,7 +367,7 @@ max-w-none
 <p>Поделиться опытом.</p>
 <p>Помочь принять решение.</p>
 <p>Мне ближе второй вариант.</p>
-<h2 id="_4">Почему я не люблю спам</h2>
+<h2>Почему я не люблю спам</h2>
 <p>Спам — это попытка решить проблему количеством.</p>
 <p>Отправить больше.</p>
 <p>Показать чаще.</p>
@@ -338,7 +379,7 @@ max-w-none
 <p>Если продукт не решает проблему клиента, никакая воронка не сможет исправить эту ситуацию надолго.</p>
 <p>Поэтому я не работаю с купленными базами и не занимаюсь массовыми рассылками ради охвата.</p>
 <p>Меня интересуют отношения, а не объёмы.</p>
-<h2 id="_5">Что я хочу делать</h2>
+<h2>Что я хочу делать</h2>
 <p>Мне интересно помогать компаниям выстраивать понятные и честные процессы коммуникации с клиентами.</p>
 <p>Без магии.</p>
 <p>Без обещаний увеличить продажи на 300%.</p>
@@ -352,11 +393,10 @@ max-w-none
 <p>Хороший маркетинг помогает понять.</p>
 </blockquote>
 <p>Именно этим мне и интересно заниматься.</p>
-</article>
+            </div>
+        </div>
 
-</main>
-
-</div>
+    </main>
 
 </div>
 
