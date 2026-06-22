@@ -5,11 +5,43 @@
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/index%20copy/</loc>
+         <loc>https://skillmatrix.ru/alternatives/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/tags/</loc>
+         <loc>https://skillmatrix.ru/browser-support/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/conventions/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/creating-your-site/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/customization/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/getting-started/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/license/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/philosophy/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/publishing-your-site/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/upgrade/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
@@ -17,51 +49,431 @@
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/docs/blog/</loc>
+         <loc>https://skillmatrix.ru/blog/2023/11/30/adding-a-badge-to-your-project/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/docs/blog/posts/2025-01-15-crm-marketing/</loc>
+         <loc>https://skillmatrix.ru/blog/2022/09/12/blog-support-just-landed/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20CRM/CRM-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3-%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%20%D0%B4%D0%B0%D0%B2%D0%BD%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D1%81%D1%82%D0%B0%D0%BB%20%D0%B1%D1%8B%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%20%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D1%83/</loc>
+         <loc>https://skillmatrix.ru/blog/2022/05/05/chinese-search-support/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20CRM/%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%B8%D1%82%D1%81%D1%8F%20CRM-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%20%D0%BD%D0%B0%20%D0%BF%D1%83%D1%82%D0%B8%20%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0/</loc>
+         <loc>https://skillmatrix.ru/blog/2021/09/26/excluding-content-from-search/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20CRM/%D0%9E%D1%84%D1%84%D0%B5%D1%80/</loc>
+         <loc>https://skillmatrix.ru/blog/2023/09/22/using-git-sparse-checkout-for-faster-documentation-builds/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20CRM/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D1%8F%20%D0%B7%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%8E%D1%81%D1%8C%20CRM-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D0%BE%D0%BC/</loc>
+         <loc>https://skillmatrix.ru/blog/2025/11/18/goodbye-github-discussions/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20CRM/%D0%9F%D1%83%D1%82%D1%8C%20%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%20%D0%B8%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20CRM-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D0%B0/</loc>
+         <loc>https://skillmatrix.ru/blog/2025/11/11/insiders-now-free-for-everyone/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20CRM/%D0%A7%D1%82%D0%BE%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B5%20CRM-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/</loc>
+         <loc>https://skillmatrix.ru/blog/2026/02/18/mkdocs-2.0/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/%D0%AF%20%D0%BD%D0%B5%20%D1%85%D0%BE%D1%87%D1%83%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C.%20%D0%9D%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%BB%D0%B5%D0%BD%D1%8C/</loc>
+         <loc>https://skillmatrix.ru/blog/2021/09/13/search-better-faster-smaller/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D1%83/%D0%9F%D1%80%D0%BE%20%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D1%83%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8/</loc>
+         <loc>https://skillmatrix.ru/blog/2023/10/02/sunsetting-gitter-towards-efficient-community-engagement/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82/%D0%9A%D0%B0%D0%BA%20%D1%8F%20%D0%B2%D0%B5%D1%88%D0%B0%D0%BB%20%D0%B7%D0%B5%D1%80%D0%BA%D0%B0%D0%BB%D0%BE%20%D0%B2%20%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9/</loc>
+         <loc>https://skillmatrix.ru/blog/2021/12/27/the-past-present-and-future/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
     <url>
-         <loc>https://skillmatrix.ru/%D0%9F%D1%80%D0%BE%20%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%BD%D0%B0%20MkDocs%20Material%20%D0%B8%20GitHub%20Pages/</loc>
+         <loc>https://skillmatrix.ru/blog/2024/08/19/how-were-transforming-material-for-mkdocs/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/2025/11/05/zensical/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/changelog/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/contributing/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/contributing/adding-translations/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/contributing/making-a-pull-request/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/contributing/reporting-a-bug/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/contributing/reporting-a-docs-issue/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/contributing/requesting-a-change/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/guides/creating-a-reproduction/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/insiders/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/insiders/getting-started/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/insiders/upgrade/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/insiders/changelog/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/blog/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/group/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/info/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/meta/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/offline/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/optimize/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/privacy/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/projects/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/search/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/social/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/tags/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/typeset/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/requirements/caching/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/plugins/requirements/image-processing/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/admonitions/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/annotations/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/buttons/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/code-blocks/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/content-tabs/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/data-tables/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/diagrams/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/footnotes/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/formatting/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/grids/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/icons-emojis/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/images/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/lists/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/math/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/reference/tooltips/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/adding-a-comment-system/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/adding-a-git-repository/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/building-an-optimized-site/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/building-for-offline-usage/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/changing-the-colors/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/changing-the-fonts/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/changing-the-language/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/changing-the-logo-and-icons/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/ensuring-data-privacy/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-a-blog/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-navigation/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-site-analytics/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-site-search/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-social-cards/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-tags/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-the-footer/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-the-header/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/setting-up-versioning/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/extensions/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/extensions/python-markdown-extensions/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/setup/extensions/python-markdown/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/crm/customer-journey/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/crm/offer/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/crm/path/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/crm/what-is/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/crm/why-marketing/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/crm/why-me/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/life/not-work/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/music/simple/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/repair/mirror/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/skillmatrix/technology/how-it-works/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/tutorials/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/tutorials/blogs/basic/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/tutorials/blogs/engage/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/tutorials/blogs/navigation/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/tutorials/social/basic/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/tutorials/social/custom/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/archive/2026/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/archive/2025/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/archive/2024/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/archive/2023/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/archive/2022/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/archive/2021/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/category/general/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/category/build/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/category/performance/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/category/blog/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/category/search/</loc>
+         <lastmod>2026-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://skillmatrix.ru/blog/page/2/</loc>
          <lastmod>2026-06-22</lastmod>
     </url>
 </urlset>
