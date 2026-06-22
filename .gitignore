@@ -3,5 +3,6 @@
 .DS_Store
 requirements.txt
 .venv/
-backup/
 site/
+backu*
+docs/docs
