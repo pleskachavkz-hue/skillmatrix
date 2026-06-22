@@ -1,0 +1,17 @@
+site_name: Skillmatrix
+site_url: https://skillmatrix.ru
+
+theme:
+  name: material
+  language: ru
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html

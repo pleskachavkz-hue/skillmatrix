@@ -1,0 +1,25 @@
+/* Красивые карточки на главной */
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.grid.cards .md-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid.cards .md-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.grid.cards .md-card .lg {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
