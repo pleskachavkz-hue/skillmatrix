@@ -1,0 +1,32 @@
+/* docs/stylesheets/extra.css */
+
+/* Hero-блок */
+.mdx-hero {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.mdx-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.mdx-hero .subtitle {
+  font-size: 1.5rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 2rem;
+}
+
+.mdx-hero .buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mdx-hero .buttons .md-button {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+}
